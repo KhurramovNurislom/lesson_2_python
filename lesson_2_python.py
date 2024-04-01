@@ -29,9 +29,7 @@ def clearPunt(word):
     return "".join(word.translate(str.maketrans('', '', string.punctuation)).lower().split())
 
 def ifForSearch(index, search, word):
-    clearPunt(search)
-    clearPunt(word)
-    if search in word:
+    if clearPunt(search) in clearPunt(word):
         printFull(index)  
     
 while True:
